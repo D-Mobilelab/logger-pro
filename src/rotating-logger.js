@@ -3,7 +3,7 @@
 * @name logger-pro.RotatingLogger
 *
 * @description
-* Provides you and advanced functionality of a log system.
+* Provides you an advanced functionality of a log system.
 *
 * To use **RotatingLogger** you have to create a new instance of RotatingLogger.
 *
