@@ -2,7 +2,7 @@
  * @ngdoc overview
  * @name logger-pro
  *
-* @description
+ * @description
  * # Logger Pro
  * Logger is a module that provides you an advanced log system.
  *
@@ -31,10 +31,10 @@
  * - {@link logger.RotatingLogger RotatingLogger} 
  * 
  */
- var BaseLogger = require('./base-logger.js');
- var RotatingLogger = require('./rotating-logger.js');
+var BaseLogger = require('./base-logger.js');
+var RotatingLogger = require('./rotating-logger.js');
 
- module.exports = {
- 	BaseLogger: BaseLogger,
- 	RotatingLogger: RotatingLogger
- };
+module.exports = {
+    BaseLogger: BaseLogger,
+    RotatingLogger: RotatingLogger
+};

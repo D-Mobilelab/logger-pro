@@ -399,6 +399,6 @@ var BaseLogger = function(){
         enabled: true
     });
 
-}
+};
 
 module.exports = BaseLogger;
