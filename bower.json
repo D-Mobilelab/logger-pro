@@ -1,0 +1,29 @@
+{
+  "name": "logger-pro",
+  "description": "description of logger-pro",
+  "main": [
+    "dist/dist.js"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/*",
+    "!dist/**/*",
+    "!src/**/*",
+    "!CHANGELOG",
+    "!README.md",
+    "!bower.json"
+  ],
+  "keywords": [],
+  "authors": [],
+  "homepage": "https://github.com/D-Mobilelab/logger-pro",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/D-Mobilelab/logger-pro.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "private": false
+}
