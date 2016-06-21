@@ -1,12 +1,28 @@
 /**
- * @ngdoc overview
- * @name BaseLogger
- *
- * @description
- * I'm the overview of documentation, I'm in docs/main.js file
- *
- * Click on "cat" or "dog" module in navbar
- */
+* @ngdoc object
+* @name logger-pro.BaseLogger
+*
+* @description
+* Provides you the basic functionality of a log system.
+*
+* To use **BaseLogger** you have to create a new instance of BaseLogger.
+*
+* In this example, I have created a new instance of BaseLogger :
+* <pre>
+*   var BaseLogger = new LoggerPro.BaseLogger();
+* </pre>
+
+* # Enable/Disable Logger
+* To **enable** or **disable** logger just call init with enabled:true/false.
+*
+* <pre>
+*  BaseLogger.init({enabled:true})  //Logger is now enabled
+*
+*  BaseLogger.init({enabled:false}) //Logger is now disabled
+* </pre>
+*
+*
+*/
 
 var BaseLogger = function(){
 
@@ -18,6 +34,26 @@ var BaseLogger = function(){
     // config will hold the configuration used at runtime, e.g. 
     var config = {};
 
+    /**
+     * @ngdoc function
+     * @name BaseLogger#getConfig
+     * @methodOf logger-pro.BaseLogger
+     *
+     * @description 
+     * This method is a "read-only" getter for config. 
+     *
+     * Get BaseLogger's configuration.
+     *
+     * @example
+     * # BaseLogger getConfig 
+     * Here is one example of the getConfig method.
+     *
+     * <pre>
+     *     console.log( BaseLogger.getConfig() );
+     * </pre>
+     *
+     */
+
     // "read-only" getter for config
     this.getConfig = function getConfig(){
         return JSON.parse(JSON.stringify(config));
@@ -27,6 +63,74 @@ var BaseLogger = function(){
     var emit = function emit(level, args){
         console[level](args);
     };
+
+    /**
+     * @ngdoc function
+     * @name BaseLogger#init
+     * @methodOf logger-pro.BaseLogger
+     *
+     * @description 
+     * This method is used to initialize or to change the configuration of 
+     * the Logger's module. Call init whenever you need to change the Logger's configuration. 
+     *
+     * @param {Object} options (see attributes below)
+     * @param {boolean} [options.enabled=true] Enable/Disable the Logger
+     * @param {string} [options.level='log'] Actives all levels following the given
+     * @param {Object} [options.levels=undefined] Levels contains the manual configuration of the Logger.
+     * @param {function} [options.emit=Uses window.console] Emit is an addictional parameter that allows you to use a custom function as an emitter.
+     *
+     * @example
+     * # BaseLogger Init 
+     * Here are some examples of the init method.
+     *
+     * **Remember that before call init you have to create a new instance of BaseLogger: **
+     *  <pre>
+     *      var BaseLogger = new LoggerPro.BaseLogger(); 
+     *  </pre>
+     *
+     * **Default initialization**
+     * <pre>
+     *  BaseLogger.init({
+     *      level: 'log', //set all level to true
+     *      enabled: true //enables logger
+     *  }); 
+     *
+     * </pre>
+     *
+     * **BaseLogger with manual configuration**
+     *
+     * I want that logger logs only logs, warnings and errors
+     * <pre>
+     *     BaseLogger.init({
+     *      levels: { 
+     *         'log': true, 
+     *         'info': false,
+     *         'table': false  
+     *         'warn': true,
+     *         'error': true
+     *       },
+     *       enabled: true //enables logger
+     *      }); 
+     *
+     * </pre>
+     *
+     * **BaseLogger with level configuration and personalized emit**
+     *
+     * I want that logger logs only warning and error
+     * <pre>
+     *     BaseLogger.init({
+     *       level: 'warn',  //Logger now logs only warnings and errors
+     *       emit: function(level, args){
+     *               console[level](args); //log args
+     *               
+     *               // Do something, i.e: sends error, store something etc.
+     *             },
+     *        enabled: true //enables logger
+     *      }); 
+     *
+     * </pre>
+     * 
+     */
 
     // init the module with optional parameters
     this.init = function init(options){
@@ -108,7 +212,29 @@ var BaseLogger = function(){
         }
     };
 
-    
+    /**
+     * @ngdoc function
+     * @name BaseLogger#log
+     * @methodOf logger-pro.BaseLogger
+     *
+     * @description 
+     * This method defines a method for each log level.
+     * Each method uses the general function emit to log messages
+     *
+     * ***Log level must be true and logger must be enabled***
+     *
+     * @param {*} arguments Arguments to log
+     *
+     * @example
+     * # BaseLogger log 
+     * Here is one example of the Log method.
+     *
+     * <pre>
+     *     BaseLogger.log('Hello World!') //Logs Hello World
+     * </pre>
+     *
+     */
+
     /* define a method for each log level
     *  each method uses the general function emit to log messages
     */
@@ -119,6 +245,29 @@ var BaseLogger = function(){
         }
     };
 
+    /**
+     * @ngdoc function
+     * @name BaseLogger#table
+     * @methodOf logger-pro.BaseLogger
+     *
+     * @description 
+     * This method defines a method for each table level.
+     * Each method uses the general function emit to table messages
+     *
+     * ***table level must be true and logger must be enabled***
+     *
+     * @param {*} arguments Arguments to show as table messages
+     *
+     * @example
+     * # BaseLogger Table 
+     * Here is one example of the Table method.
+     *
+     * <pre>
+     *     BaseLogger.table('Hello World!') //show Hello World as table message
+     * </pre>
+     *
+     */
+
     this.table = function table(){
         var args = Array.prototype.slice.call(arguments);
         if (config.enabled && !!config.table){
@@ -126,12 +275,59 @@ var BaseLogger = function(){
         }    
     };
 
+    /**
+     * @ngdoc function
+     * @name BaseLogger#info
+     * @methodOf logger-pro.BaseLogger
+     *
+     * @description 
+     * This method defines a method for each info level.
+     * Each method uses the general function emit to info messages
+     *
+     * ***info level must be true and logger must be enabled***
+     *
+     * @param {*} arguments Arguments to show as Info messages
+     *
+     * @example
+     * # BaseLogger Info 
+     * Here is one example of the info method.
+     *
+     * <pre>
+     *     BaseLogger.info('Hello World!') //show Hello World as info message
+     * </pre>
+     *
+     */
+
     this.info = function info(){
         var args = Array.prototype.slice.call(arguments);
         if (config.enabled && !!config.info){
             emit('info', args);
         }
     };
+
+
+    /**
+     * @ngdoc function
+     * @name BaseLogger#warn
+     * @methodOf logger-pro.BaseLogger
+     *
+     * @description 
+     * This method defines a method for each warn level.
+     * Each method uses the general function emit to warn messages
+     *
+     * ***warn level must be true and logger must be enabled***
+     *
+     * @param {*} arguments Arguments to show as warn messages
+     *
+     * @example
+     * # BaseLogger Warn 
+     * Here is one example of the warn method.
+     *
+     * <pre>
+     *     BaseLogger.warn('Hello World!') //show Hello World as warn message
+     * </pre>
+     *
+     */
     
     this.warn = function warn(){
         var args = Array.prototype.slice.call(arguments);
@@ -139,6 +335,29 @@ var BaseLogger = function(){
             emit('warn', args);
         }    
     };
+
+    /**
+     * @ngdoc function
+     * @name BaseLogger#error
+     * @methodOf logger-pro.BaseLogger
+     *
+     * @description 
+     * This method defines a method for each error level.
+     * Each method uses the general function emit to error messages
+     *
+     * ***error level must be true and logger must be enabled***
+     *
+     * @param {*} arguments Arguments to show as error messages
+     *
+     * @example
+     * # BaseLogger Error 
+     * Here is one example of the error method.
+     *
+     * <pre>
+     *     BaseLogger.error('Hello World!') //show Hello World as error message
+     * </pre>
+     *
+     */
     
     this.error = function error(){
         var args = Array.prototype.slice.call(arguments);
@@ -146,6 +365,29 @@ var BaseLogger = function(){
             emit('error', args);
         }    
     };
+
+    /**
+      * @ngdoc function
+     * @name BaseLogger#isEnabled
+     * @methodOf logger-pro.BaseLogger
+     *
+     * @description 
+     * This method defines a method to know if BaseLogger is enabled or not;
+     * 
+     *
+     * @example
+     * # BaseLogger isEnabled 
+     * Here is one example of the isEnabled method.
+     *
+     * <pre>
+     *     if(BaseLogger.isEnabled()){
+     *          //Do something
+     *      } else {
+     *          //Do something else
+     *      }
+     * </pre>
+     *
+     */
 
     this.isEnabled = function(){
         return !!config.enabled;
