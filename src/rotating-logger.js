@@ -1,12 +1,14 @@
 /**
  * @ngdoc overview
- * @name main
+ * @name RotatingLogger
  *
  * @description
  * I'm the overview of documentation, I'm in docs/main.js file
  *
  * Click on "cat" or "dog" module in navbar
  */
+
+var BaseLogger = require('./rotating-logger.js');
 
 var RotatingLogger = function(){
 
