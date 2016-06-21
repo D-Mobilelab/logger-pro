@@ -8,10 +8,11 @@
  * Click on "cat" or "dog" module in navbar
  */
 
-var dog = require('./dog');
-var cat = require('./cat');
+ var BaseLogger = require('./base-logger.js');
+ var BaseLogger = require('./rotating-logger.js');
 
-module.exports = {
-    dog: dog,
-    cat: cat
-};
+
+ module.exports = {
+ 	BaseLogger: BaseLogger,
+ 	RotatingLogger: RotatingLogger
+ };
