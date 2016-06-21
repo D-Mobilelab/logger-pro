@@ -1,2 +1,3 @@
-BaseLogger.log('ciao');
-RotatingLogger.log('ciao');
+var logger = new LoggerPro.BaseLogger();
+
+logger.log('cuigbbzdfkl');

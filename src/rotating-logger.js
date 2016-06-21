@@ -5,7 +5,7 @@
  * @description
  * I'm the overview of documentation, I'm in docs/main.js file
  *
- * Click on "cat" or "dog" module in navbar
+ * descr
  */
 
 var BaseLogger = require('./base-logger.js');
