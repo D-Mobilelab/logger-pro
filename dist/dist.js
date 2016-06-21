@@ -120,13 +120,13 @@ var BaseLogger = function(){
         enabled: true
     });
 
- }
+}
 
- module.exports = BaseLogger;
+module.exports = BaseLogger;
 },{}],2:[function(require,module,exports){
 
  var BaseLogger = require('./base-logger.js');
- var BaseLogger = require('./rotating-logger.js');
+ var RotatingLogger = require('./rotating-logger.js');
 
  module.exports = {
  	BaseLogger: BaseLogger,
@@ -134,7 +134,7 @@ var BaseLogger = function(){
  };
 },{"./base-logger.js":1,"./rotating-logger.js":3}],3:[function(require,module,exports){
 
-var BaseLogger = require('./rotating-logger.js');
+var BaseLogger = require('./base-logger.js');
 
 var RotatingLogger = function(){
 
@@ -267,8 +267,7 @@ var RotatingLogger = function(){
 
 };
 
+module.exports = RotatingLogger;
 
- module.exports = RotatingLogger;
-
-},{"./rotating-logger.js":3}]},{},[2])(2)
+},{"./base-logger.js":1}]},{},[2])(2)
 });

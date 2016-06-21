@@ -5,11 +5,11 @@
  * @description
  * I'm the overview of documentation, I'm in docs/main.js file
  *
- * Click on "cat" or "dog" module in navbar
+ * example
  */
 
  var BaseLogger = require('./base-logger.js');
- var BaseLogger = require('./rotating-logger.js');
+ var RotatingLogger = require('./rotating-logger.js');
 
  module.exports = {
  	BaseLogger: BaseLogger,

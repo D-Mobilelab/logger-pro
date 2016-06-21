@@ -8,7 +8,7 @@
  * Click on "cat" or "dog" module in navbar
  */
 
-var BaseLogger = require('./rotating-logger.js');
+var BaseLogger = require('./base-logger.js');
 
 var RotatingLogger = function(){
 
@@ -162,5 +162,4 @@ var RotatingLogger = function(){
 
 };
 
-
- module.exports = RotatingLogger;
+module.exports = RotatingLogger;
