@@ -120,18 +120,17 @@ var BaseLogger = function(){
         enabled: true
     });
 
-}
+};
 
 module.exports = BaseLogger;
 },{}],2:[function(require,module,exports){
+var BaseLogger = require('./base-logger.js');
+var RotatingLogger = require('./rotating-logger.js');
 
- var BaseLogger = require('./base-logger.js');
- var RotatingLogger = require('./rotating-logger.js');
-
- module.exports = {
- 	BaseLogger: BaseLogger,
- 	RotatingLogger: RotatingLogger
- };
+module.exports = {
+    BaseLogger: BaseLogger,
+    RotatingLogger: RotatingLogger
+};
 },{"./base-logger.js":1,"./rotating-logger.js":3}],3:[function(require,module,exports){
 
 var BaseLogger = require('./base-logger.js');
@@ -180,18 +179,22 @@ var RotatingLogger = function(){
         var args = Array.prototype.slice.call(arguments);
         handleMessages('log', args);
     };
+
     this.info = function(){
         var args = Array.prototype.slice.call(arguments);
         handleMessages('info', args);
     };
+
     this.table = function(){
         var args = Array.prototype.slice.call(arguments);
         handleMessages('table', args);
     };
+
     this.warn = function(){
         var args = Array.prototype.slice.call(arguments);
         handleMessages('warn', args);
     };
+
     this.error = function(){
         var args = Array.prototype.slice.call(arguments);
         handleMessages('error', args);
