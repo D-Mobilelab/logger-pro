@@ -1,17 +1,40 @@
 /**
  * @ngdoc overview
- * @name main
+ * @name logger-pro
  *
  * @description
- * I'm the overview of documentation, I'm in docs/main.js file
+ * # Logger Pro
+ * Logger is a module that provides you an advanced log system.
  *
- * Click on "cat" or "dog" module in navbar
+ *
+ * Remember that **Logger Pro** is organized in **levels**, sorted by relevance: 
+ *
+ * - **Log**;
+ * - **Info**;
+ * - **Table**;
+ * - **Warning**;
+ * - **Error**;
+ *
+ * ***Note that is very relevant of how Logger Pro's levels are ordered!***
+ *
+ * # Enable/Disable Logger
+ * To **enable** or **disable** logger just call init with enabled:true/false.
+ *
+ * <pre>
+ *  Logger.init({enabled:true})  //Logger is now enabled
+ *
+ *  Logger.init({enabled:false}) //Logger is now disabled
+ * </pre>
+ *
+ * # Components
+ * - {@link logger-pro.BaseLogger BaseLogger} 
+ * - {@link logger.RotatingLogger RotatingLogger} 
+ * 
  */
-
-var dog = require('./dog');
-var cat = require('./cat');
+var BaseLogger = require('./base-logger.js');
+var RotatingLogger = require('./rotating-logger.js');
 
 module.exports = {
-    dog: dog,
-    cat: cat
+    BaseLogger: BaseLogger,
+    RotatingLogger: RotatingLogger
 };

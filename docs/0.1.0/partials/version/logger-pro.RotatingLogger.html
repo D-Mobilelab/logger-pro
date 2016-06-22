@@ -1,0 +1,166 @@
+<h1><code ng:non-bindable="">RotatingLogger</code>
+<div><span class="hint">service in module <code ng:non-bindable="">logger-pro</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="logger-pro-rotatinglogger-page"><p>Provides you an advanced functionality of a log system.</p>
+<p>To use <strong>RotatingLogger</strong> you have to create a new instance of RotatingLogger.</p>
+<p>In this example, I have created a new instance of RotatingLogger :
+<pre class="prettyprint linenums">
+  var RotatingLogger = new LoggerPro.RotatingLogger();
+</pre>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_endrecording">endRecording()</h3>
+<div class="endrecording"><div class="rotatinglogger-endrecording-page"><p>This method tells <strong>RotatingLogger</strong> to stop recording messages and 
+calls internal function saveRecords (set within init method).</p>
+<p>If you&#39;re not recording it will show an error message.</p>
+<p><strong>Remember that first you have to start a recording with the startRecording method</strong></p>
+</div><h4 id="methods_endrecording_example">Example</h4>
+<div class="example"><div class="rotatinglogger-endrecording-page"><h5 id="methods_endrecording_example_rotatinglogger-endrecording">RotatingLogger endRecording</h5>
+<p>This is an example of how to use <strong>endRecording</strong> method
+<pre class="prettyprint linenums">
+ //Stop recording and saves records
+ RotatingLogger.endRecording()  
+
+
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_error">error(arguments)</h3>
+<div class="error"><div class="rotatinglogger-error-page"><p>This method defines a method for each error level.
+Each method uses the general function emit to error messages</p>
+<p><strong><em>error level must be true and logger must be enabled</em></strong></p>
+</div><h5 id="methods_error_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>arguments</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="rotatinglogger-error-page"><p>Arguments to error</p>
+</div></td></tr></tbody></table><h4 id="methods_error_example">Example</h4>
+<div class="example"><div class="rotatinglogger-error-page"><h5 id="methods_error_example_rotatinglogger-error">RotatingLogger error</h5>
+<p>Here is one example of the error method.</p>
+<pre class="prettyprint linenums">
+    RotatingLogger.error('Hello World!') //show Hello World as error message
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_getconfig">getConfig()</h3>
+<div class="getconfig"><div class="rotatinglogger-getconfig-page"><p>This method wraps original BaseLogger&#39;s getConfig function
+adding maxSize attribute, click <a href="#/version/logger-pro.BaseLogger#methods_getconfig">here</a> to see getConfig() documentation.</p>
+</div></div>
+</li>
+<li><h3 id="methods_info">info(arguments)</h3>
+<div class="info"><div class="rotatinglogger-info-page"><p>This method defines a method for each info level.
+Each method uses the general function emit to info messages</p>
+<p><strong><em>info level must be true and logger must be enabled</em></strong></p>
+</div><h5 id="methods_info_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>arguments</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="rotatinglogger-info-page"><p>Arguments to info</p>
+</div></td></tr></tbody></table><h4 id="methods_info_example">Example</h4>
+<div class="example"><div class="rotatinglogger-info-page"><h5 id="methods_info_example_rotatinglogger-info">RotatingLogger Info</h5>
+<p>Here is one example of the info method.</p>
+<pre class="prettyprint linenums">
+    RotatingLogger.info('Hello World!') //show Hello World as info message
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_init">init(options)</h3>
+<div class="init"><div class="rotatinglogger-init-page"><p>This method is used to initialize or to change the configuration of 
+the Rotating Logger&#39;s module. Call init whenever you need to change the Rotating Logger&#39;s configuration. </p>
+<p><strong>Remember that before call init you have to create a new instance of RotatingLogger: </strong>
+ <pre class="prettyprint linenums">
+     var RotatingLogger = new LoggerPro.RotatingLogger(); 
+ </pre>
+<p>Remember to see <strong>BaseLogger</strong> <a href="#/version/logger-pro.BaseLogger#methods_init">init()</a> documentation to configure also the <strong>BaseLogger</strong> functionality.</p>
+</div><h5 id="methods_init_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="rotatinglogger-init-page"><p>(see attributes below)</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>maxSize</td><td><a href="" class="label type-hint type-hint-integer">Integer</a></td><td><div class="rotatinglogger-init-page"><p>maxSize defines the max number of messages recorded.</p>
+</div> <p><em>(default: 100)</em></p></td></tr><tr><td>sliding</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="rotatinglogger-init-page"><p>Enables &quot;sliding window&quot; recording.</p>
+<p>If enabled, the logger will record the last records only (&lt;= maxSize)</p>
+<p>If not enabled, the logger will automatically save a list of messages when length = maxSize </p>
+</div> <p><em>(default: true)</em></p></td></tr><tr><td>recordingEnabled</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="rotatinglogger-init-page"><p>Enables message recording</p>
+<p>If disabled, no messages are recorded (even between startRecording and endRecording)</p>
+</div> <p><em>(default: true)</em></p></td></tr><tr><td>saveRecords</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="rotatinglogger-init-page"><p>Function used to export recorded messages.</p>
+</div> <p><em>(default: exports JSon file)</em></p></td></tr></tbody></table></td></tr></tbody></table><h4 id="methods_init_example">Example</h4>
+<div class="example"><div class="rotatinglogger-init-page"><h5 id="methods_init_example_logger-init">Logger Init</h5>
+<p>Here is one example of the init method.</p>
+<p><strong>RotatingLogger initialization</strong>
+<pre class="prettyprint linenums">
+
+  RotatingLogger.init({
+     maxSize: 100, //set maxSize to 100
+     sliding: true, //enables sliding mode
+     recordingEnabled: true, //enable recording
+     enabled: true //enable logger
+  }); 
+
+</pre>
+<p><strong>RotatingLogger initialization with custom saveRecords</strong></p>
+<p>Here is an example of initialization where saveRecords sends messages calling an API.
+<pre class="prettyprint linenums">
+
+  RotatingLogger.init({
+     ...,
+     saveRecords: function(messages){
+         API_send(messages)
+     }
+  }); 
+
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_log">log(arguments)</h3>
+<div class="log"><div class="rotatinglogger-log-page"><p>This method defines a method for each log level.
+Each method uses the general function emit to log messages</p>
+<p><strong><em>Log level must be true and logger must be enabled</em></strong></p>
+</div><h5 id="methods_log_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>arguments</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="rotatinglogger-log-page"><p>Arguments to log</p>
+</div></td></tr></tbody></table><h4 id="methods_log_example">Example</h4>
+<div class="example"><div class="rotatinglogger-log-page"><h5 id="methods_log_example_rotatinglogger-log">RotatingLogger log</h5>
+<p>Here is one example of the Log method.</p>
+<pre class="prettyprint linenums">
+    RotatingLogger.log('Hello World!') //Logs Hello World
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_startrecording">startRecording()</h3>
+<div class="startrecording"><div class="rotatinglogger-startrecording-page"><p>This method starts the recording of all the messages logged by RotatingLogger.</p>
+<p><strong><em>Remember that recordingEnabled must be set to true to record</em></strong> </p>
+</div><h4 id="methods_startrecording_example">Example</h4>
+<div class="example"><div class="rotatinglogger-startrecording-page"><h5 id="methods_startrecording_example_rotatinglogger-startrecording">RotatingLogger startRecording</h5>
+<p>This is an example of how to use <strong>startRecording</strong> method
+<pre class="prettyprint linenums">
+ RotatingLogger.startRecording() // Start recording
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_table">table(arguments)</h3>
+<div class="table"><div class="rotatinglogger-table-page"><p>This method defines a method for each table level.
+Each method uses the general function emit to table messages</p>
+<p><strong><em>table level must be true and logger must be enabled</em></strong></p>
+</div><h5 id="methods_table_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>arguments</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="rotatinglogger-table-page"><p>Arguments to table</p>
+</div></td></tr></tbody></table><h4 id="methods_table_example">Example</h4>
+<div class="example"><div class="rotatinglogger-table-page"><h5 id="methods_table_example_rotatinglogger-table">RotatingLogger Table</h5>
+<p>Here is one example of the table method.</p>
+<pre class="prettyprint linenums">
+    RotatingLogger.table('Hello World!') //show Hello World as table message
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_warn">warn(arguments)</h3>
+<div class="warn"><div class="rotatinglogger-warn-page"><p>This method defines a method for each warn level.
+Each method uses the general function emit to warn messages</p>
+<p><strong><em>warn level must be true and logger must be enabled</em></strong></p>
+</div><h5 id="methods_warn_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>arguments</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="rotatinglogger-warn-page"><p>Arguments to warn</p>
+</div></td></tr></tbody></table><h4 id="methods_warn_example">Example</h4>
+<div class="example"><div class="rotatinglogger-warn-page"><h5 id="methods_warn_example_rotatinglogger-warn">RotatingLogger Warn</h5>
+<p>Here is one example of the warn method.</p>
+<pre class="prettyprint linenums">
+    RotatingLogger.warn('Hello World!') //show Hello World as warn message
+</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

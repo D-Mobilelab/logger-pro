@@ -1,6 +1,6 @@
 {
   "name": "logger-pro",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "description of logger-pro",
   "keywords": [],
   "homepage": "https://github.com/D-Mobilelab/logger-pro",
@@ -57,6 +57,6 @@
   "browserify": {
     "src": "main.js",
     "dist": "dist.js",
-    "global": "Animals"
+    "global": "LoggerPro"
   }
 }
