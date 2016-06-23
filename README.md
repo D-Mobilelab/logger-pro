@@ -1,3 +1,35 @@
 # logger-pro
 
-I'm README of logger-pro
+Logger Pro is a JavaScript module that provides you an advanced log system.
+
+Remember that Logger Pro is organized in levels, sorted by relevance: 
+ 
+- Log;
+- Info;
+- Table;
+- Warning;
+- Error;
+ 
+Note that is very relevant of how Logger Pro's levels are ordered!
+
+If you want a basic logger system you can use the BaseLogger module. We give you also an advanced logger system, called Rotating Logger. With Rotating Logger you can record and export all the recorded message as a JSON format. Read the full documentation to know more about the two systems provided by Logger Pro.
+
+## Installation
+
+You can install Logger Pro using NPM or Bower.
+
+### NPM
+```
+npm install --save logger-pro
+```
+You can found the library ready for production on <i>node_modules/logger-pro/dist/dist.js</i>
+
+### Bower
+```
+bower install --save logger-pro
+```
+You can found the library ready for production on <i>bower_components/logger-pro/dist/dist.js</i>
+
+## Documentation
+
+In progress

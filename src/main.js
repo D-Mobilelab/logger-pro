@@ -4,7 +4,7 @@
  *
  * @description
  * # Logger Pro
- * Logger is a module that provides you an advanced log system.
+ * Logger Pro is a module that provides you an advanced log system.
  *
  *
  * Remember that **Logger Pro** is organized in **levels**, sorted by relevance: 
@@ -31,6 +31,7 @@
  * - {@link logger.RotatingLogger RotatingLogger} 
  * 
  */
+ 
 var BaseLogger = require('./base-logger.js');
 var RotatingLogger = require('./rotating-logger.js');
 
