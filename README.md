@@ -29,14 +29,6 @@ npm install --save logger-pro
 ```
 You can found the library ready for production on <i>node_modules/logger-pro/dist/dist.js</i>
 
-### Bower
-```
-bower install --save logger-pro
-```
-You can found the library ready for production on <i>bower_components/logger-pro/dist/dist.js</i>
-
-Early Available
-
 ## Documentation
 
-In progress
+https://d-mobilelab.github.io/logger-pro/0.1.1/#/version/logger-pro
