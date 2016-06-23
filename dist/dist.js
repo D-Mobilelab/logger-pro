@@ -124,6 +124,7 @@ var BaseLogger = function(){
 
 module.exports = BaseLogger;
 },{}],2:[function(require,module,exports){
+ 
 var BaseLogger = require('./base-logger.js');
 var RotatingLogger = require('./rotating-logger.js');
 
