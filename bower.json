@@ -1,6 +1,6 @@
 {
   "name": "logger-pro",
-  "description": "description of logger-pro",
+  "description": "An advanced log system",
   "main": [
     "dist/dist.js"
   ],
