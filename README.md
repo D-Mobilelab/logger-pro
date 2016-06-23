@@ -1,3 +1,9 @@
+[![Build Status](https://travis-ci.org/D-Mobilelab/logger-pro.svg?branch=master)](https://travis-ci.org/D-Mobilelab/barney)
+[![Coverage Status](https://coveralls.io/repos/github/D-Mobilelab/logger-pro/badge.svg?branch=master)](https://coveralls.io/github/D-Mobilelab/logger-pro?branch=master)
+[![npm version](https://badge.fury.io/js/logger-pro.svg)](https://badge.fury.io/js/logger-pro)
+[![Bower version](https://badge.fury.io/bo/logger-pro.svg)](https://badge.fury.io/bo/logger-pro)
+[![GitHub version](https://badge.fury.io/gh/D-Mobilelab%2Flogger-pro.svg)](https://badge.fury.io/gh/D-Mobilelab%2Flogger-pro)
+
 # logger-pro
 
 Logger Pro is a JavaScript module that provides you an advanced log system.
