@@ -1,6 +1,6 @@
 {
   "name": "logger-pro",
-  "description": "An advanced log system",
+  "description": "Advanced javascript logger system",
   "main": [
     "dist/dist.js"
   ],
@@ -16,8 +16,19 @@
     "!README.md",
     "!bower.json"
   ],
-  "keywords": [],
-  "authors": [],
+  "keywords": [
+    "logger",
+    "log",
+    "rotating",
+    "javascript"
+  ],
+  "authors": [{
+      "name": "Fabio Fognani",
+      "email": "fabio.fognani@buongiorno.com"
+  }, {
+      "name": "Lorenzo Mussi",
+      "email": "lorenzo.mussi@buongiorno.com"
+  }],
   "homepage": "https://github.com/D-Mobilelab/logger-pro",
   "repository": {
     "type": "git",
