@@ -5,11 +5,11 @@
 * @description
 * Provides you the basic functionality of a log system.
 *
-* To use **BaseLogger** you have to create a new instance of BaseLogger.
+* To use **BaseLogger** you have to include the BaseLogger script file.
 *
-* In this example, I have created a new instance of BaseLogger :
+* In this example, I have included the BaseLogger's javascript file:
 * <pre>
-*   var BaseLogger = new LoggerPro.BaseLogger();
+*   <script src="./dist/dist.js"></script>
 * </pre>
 
 * # Enable/Disable Logger
@@ -21,6 +21,11 @@
 *  BaseLogger.init({enabled:false}) //Logger is now disabled
 * </pre>
 *
+* To use one of the provided method just use BaseLogger.*
+*
+* <pre>
+*   BaseLogger.log('Hello world'); //prints hello world
+* </pre>
 *
 */
 
@@ -83,10 +88,10 @@ var BaseLogger = new function(){
      * # BaseLogger Init 
      * Here are some examples of the init method.
      *
-     * **Remember that before call init you have to create a new instance of BaseLogger: **
-     *  <pre>
-     *      var BaseLogger = new LoggerPro.BaseLogger(); 
-     *  </pre>
+     * **Remember that before call init you have to iclude the BaseLogger's javascript file: **
+     * <pre>
+     *   <script src="./dist/dist.js"></script>
+     * </pre>
      *
      * **Default initialization**
      * <pre>

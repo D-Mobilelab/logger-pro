@@ -5,11 +5,18 @@
 * @description
 * Provides you an advanced functionality of a log system.
 *
-* To use **RotatingLogger** you have to create a new instance of RotatingLogger.
+* To use **RotatingLogger** you have to include each javascript files: the dist.js file and the dist-rotating.js file (that you can find it in the dist folder).
 *
-* In this example, I have created a new instance of RotatingLogger :
+* In this example, I have included each the javascript file:
 * <pre>
-*   var RotatingLogger = new LoggerPro.RotatingLogger();
+*   <script src="./dist/dist.js"></script>
+*   <script src="./dist/dist-rotating.js"></script>
+* </pre>
+*
+* To use one of the provided method just use RotatingLogger.*
+*
+* <pre>
+*   RotatingLogger.log('Hello world'); //prints hello world
 * </pre>
 *
 */
@@ -296,12 +303,9 @@ var RotatingLogger = new function(){
      * This method is used to initialize or to change the configuration of 
      * the Rotating Logger's module. Call init whenever you need to change the Rotating Logger's configuration. 
      *
-     * **Remember that before call init you have to create a new instance of RotatingLogger: **
-     *  <pre>
-     *      var RotatingLogger = new LoggerPro.RotatingLogger(); 
-     *  </pre>
+     * **Remember that before call init you have to include the RotatingLogger' s javascript file: **
      *
-     * Remember to see **BaseLogger** {@link logger-pro.BaseLogger#methods_init init()} documentation to configure also the **BaseLogger** functionality.
+     * See **BaseLogger** {@link logger-pro.BaseLogger#methods_init init()} documentation to configure also the **BaseLogger** functionality.
      *
      * @param {Object} options (see attributes below)
      * @param {Integer} [options.maxSize=100] maxSize defines the max number of messages recorded.
