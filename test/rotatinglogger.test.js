@@ -6,7 +6,7 @@ describe('Rotating Logger -', function () {
 
 	beforeEach(function(){
 
-		RotLogger = new RotatingLogger();
+		RotLogger = RotatingLogger;
 
 		spyOn(console, 'log');				
 		spyOn(console, 'info');				

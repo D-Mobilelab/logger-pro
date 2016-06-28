@@ -31,11 +31,3 @@
  * - {@link logger.RotatingLogger RotatingLogger} 
  * 
  */
- 
-var BaseLogger = require('./base-logger.js');
-var RotatingLogger = require('./rotating-logger.js');
-
-module.exports = {
-    BaseLogger: BaseLogger,
-    RotatingLogger: RotatingLogger
-};

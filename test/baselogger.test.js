@@ -5,7 +5,7 @@ describe('BaseLogger -', function () {
 	var Logger;	
 
 	beforeEach(function(){
-		Logger = new BaseLogger();
+		Logger = BaseLogger;
 
 		spyOn(console, 'log');				
 		spyOn(console, 'info');				

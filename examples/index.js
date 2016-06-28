@@ -1,62 +1,62 @@
-var logger = new LoggerPro.BaseLogger();
-var rotLogger = new LoggerPro.RotatingLogger();
+// var logger = new LoggerPro.BaseLogger;
+// var rotLogger = new LoggerPro.RotatingLogger();
 
-logger.init({
+BaseLogger.init({
 	level: 'log', //set all level to true
     enabled: true //enables logger
 });
 
-rotLogger.init({
+RotatingLogger.init({
 	level: 'log', //set all level to true
     enabled: true //enables logger
 })
 
 var log = function(){
-	logger.log('pio');
-	rotLogger.log('pio');
+	BaseLogger.log('pio');
+	RotatingLogger.log('pio');
 }
 
 var info = function(){
-	logger.info('pio');
-	rotLogger.info('pio');
+	BaseLogger.info('pio');
+	RotatingLogger.info('pio');
 }
 
 var table = function(){
-	logger.table('pio');
-	rotLogger.table('pio');
+	BaseLogger.table('pio');
+	RotatingLogger.table('pio');
 }
 
 var warn = function(){
-	logger.warn('pio');
-	rotLogger.warn('pio');
+	BaseLogger.warn('pio');
+	RotatingLogger.warn('pio');
 }
 
 var error = function(){
-	logger.error('pio');
-	rotLogger.error('pio');
+	BaseLogger.error('pio');
+	RotatingLogger.error('pio');
 }
 
 var enable = function(){
-	logger.init({
+	BaseLogger.init({
 		enabled: true
 	});
 
-	rotLogger.init({
+	RotatingLogger.init({
 		enabled:true
 	});
 }
 var disable = function(){
-	logger.init({
+	BaseLogger.init({
 		enabled: false
 	});
 
-	rotLogger.init({
+	RotatingLogger.init({
 		enabled:false
 	});
 }
 var startRecording = function(){
-	rotLogger.startRecording();
+	RotatingLogger.startRecording();
 }
 var endRecording = function(){
-	rotLogger.endRecording();
+	RotatingLogger.endRecording();
 }

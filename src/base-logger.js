@@ -24,7 +24,7 @@
 *
 */
 
-var BaseLogger = function(){
+var BaseLogger = new function(){
 
     var _baseLogger = this;
 

@@ -227,7 +227,12 @@ module.exports = function (grunt) {
             options: {
                 stderr: false
             },
-            browserify: 'node node_modules/browserify/bin/cmd.js <%= srcPath %><%= brify.src %> -o <%= distPath %><%= brify.dist %> -s <%= brify.global %>'
+            browserify: {
+                command: [
+                    'node node_modules/browserify/bin/cmd.js <%= srcPath %><%= brify[0].src %> -o <%= distPath %><%= brify[0].dist %> -s <%= brify[0].global %>',
+                    'node node_modules/browserify/bin/cmd.js <%= srcPath %><%= brify[1].src %> -o <%= distPath %><%= brify[1].dist %> -s <%= brify[1].global %>'
+                ].join('&')
+            }
         },
 
         // STRIP COMMENTS

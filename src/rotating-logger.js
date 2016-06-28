@@ -16,10 +16,10 @@
 
 var BaseLogger = require('./base-logger.js');
 
-var RotatingLogger = function(){
+var RotatingLogger = new function(){
 
     // IMPORTANT: requires Logger
-    var logger = new BaseLogger();
+    var logger = BaseLogger;
 
     // this Array will contain each message
     var messages = [];

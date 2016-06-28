@@ -65,9 +65,13 @@
     "node": "0.10.25"
   },
   "private": false,
-  "browserify": {
-    "src": "main.js",
+  "browserify": [{
+    "src": "base-logger.js",
     "dist": "dist.js",
-    "global": "LoggerPro"
-  }
+    "global": "BaseLogger"
+  }, {
+    "src": "rotating-logger.js",
+    "dist": "dist-rotating.js",
+    "global": "RotatingLogger"
+  }]
 }
