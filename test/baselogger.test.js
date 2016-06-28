@@ -39,23 +39,23 @@ describe('BaseLogger -', function () {
 		});
 
 		it('logger prints log messages', function(){
-			Logger.log('ciao', 'mondo');
-			expect(console.log).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.log('hello', 'world');
+			expect(console.log).toHaveBeenCalledWith(['hello', 'world']);
 		});
 
 		it('logger prints info messages', function(){
-			Logger.info('ciao', 'mondo');
-			expect(console.info).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.info('hello', 'world');
+			expect(console.info).toHaveBeenCalledWith(['hello', 'world']);
 		});
 
 		it('logger prints warn messages', function(){
-			Logger.warn('ciao', 'mondo');
-			expect(console.warn).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.warn('hello', 'world');
+			expect(console.warn).toHaveBeenCalledWith(['hello', 'world']);
 		});
 
 		it('logger prints error messages', function(){
-			Logger.error('ciao', 'mondo');
-			expect(console.error).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.error('hello', 'world');
+			expect(console.error).toHaveBeenCalledWith(['hello', 'world']);
 		});
 
 		it('logger get configuration ', function(){
@@ -73,23 +73,23 @@ describe('BaseLogger -', function () {
 		});
 
 		it('logger does not prints log messages', function(){
-			Logger.log('ciao', 'mondo');
+			Logger.log('hello', 'world');
 			expect(console.log.calls.count()).toEqual(0);
 		});
 
 		it('logger prints info messages', function(){
-			Logger.info('ciao', 'mondo');
-			expect(console.info).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.info('hello', 'world');
+			expect(console.info).toHaveBeenCalledWith(['hello', 'world']);
 		});
 
 		it('logger prints warn messages', function(){
-			Logger.warn('ciao', 'mondo');
-			expect(console.warn).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.warn('hello', 'world');
+			expect(console.warn).toHaveBeenCalledWith(['hello', 'world']);
 		});
 
 		it('logger prints error messages', function(){
-			Logger.error('ciao', 'mondo');
-			expect(console.error).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.error('hello', 'world');
+			expect(console.error).toHaveBeenCalledWith(['hello', 'world']);
 		});
 	});
 
@@ -102,23 +102,23 @@ describe('BaseLogger -', function () {
 		});
 
 		it('logger does not prints log messages', function(){
-			Logger.log('ciao', 'mondo');
+			Logger.log('hello', 'world');
 			expect(console.log.calls.count()).toEqual(0);
 		});
 
 		it('logger does not prints info messages', function(){
-			Logger.info('ciao', 'mondo');
+			Logger.info('hello', 'world');
 			expect(console.info.calls.count()).toEqual(0);
 		});
 
 		it('logger prints warn messages', function(){
-			Logger.warn('ciao', 'mondo');
-			expect(console.warn).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.warn('hello', 'world');
+			expect(console.warn).toHaveBeenCalledWith(['hello', 'world']);
 		});
 
 		it('logger prints error messages', function(){
-			Logger.error('ciao', 'mondo');
-			expect(console.error).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.error('hello', 'world');
+			expect(console.error).toHaveBeenCalledWith(['hello', 'world']);
 		});
 	});
 
@@ -131,23 +131,23 @@ describe('BaseLogger -', function () {
 		});
 
 		it('logger does not prints log messages', function(){
-			Logger.log('ciao', 'mondo');
+			Logger.log('hello', 'world');
 			expect(console.log.calls.count()).toEqual(0);
 		});
 
 		it('logger does not prints info messages', function(){
-			Logger.info('ciao', 'mondo');
+			Logger.info('hello', 'world');
 			expect(console.info.calls.count()).toEqual(0);
 		});
 
 		it('logger does not prints warn messages', function(){
-			Logger.warn('ciao', 'mondo');
+			Logger.warn('hello', 'world');
 			expect(console.warn.calls.count()).toEqual(0);
 		});
 
 		it('logger prints error messages', function(){
-			Logger.error('ciao', 'mondo');
-			expect(console.error).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.error('hello', 'world');
+			expect(console.error).toHaveBeenCalledWith(['hello', 'world']);
 		});
 	});
 
@@ -165,23 +165,23 @@ describe('BaseLogger -', function () {
 		});
 
 		it('logger does not prints log messages', function(){
-			Logger.log('ciao', 'mondo');
+			Logger.log('hello', 'world');
 			expect(console.log.calls.count()).toEqual(0);
 		});
 
 		it('logger does not prints info messages', function(){
-			Logger.info('ciao', 'mondo');
-			expect(console.info).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.info('hello', 'world');
+			expect(console.info).toHaveBeenCalledWith(['hello', 'world']);
 		});
 
 		it('logger does not prints warn messages', function(){
-			Logger.warn('ciao', 'mondo');
+			Logger.warn('hello', 'world');
 			expect(console.warn.calls.count()).toEqual(0);
 		});
 
 		it('logger prints error messages', function(){
-			Logger.error('ciao', 'mondo');
-			expect(console.error).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.error('hello', 'world');
+			expect(console.error).toHaveBeenCalledWith(['hello', 'world']);
 		});
 	});
 
@@ -199,22 +199,22 @@ describe('BaseLogger -', function () {
 		});
 
 		it('logger does not prints log messages', function(){
-			Logger.log('ciao', 'mondo');
-			expect(console.log).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.log('hello', 'world');
+			expect(console.log).toHaveBeenCalledWith(['hello', 'world']);
 		});
 
 		it('logger does not prints info messages', function(){
-			Logger.info('ciao', 'mondo');
+			Logger.info('hello', 'world');
 			expect(console.info.calls.count()).toEqual(0);
 		});
 
 		it('logger does not prints warn messages', function(){
-			Logger.warn('ciao', 'mondo');
-			expect(console.warn).toHaveBeenCalledWith(['ciao', 'mondo']);
+			Logger.warn('hello', 'world');
+			expect(console.warn).toHaveBeenCalledWith(['hello', 'world']);
 		});
 
 		it('logger prints error messages', function(){
-			Logger.error('ciao', 'mondo');
+			Logger.error('hello', 'world');
 			expect(console.error.calls.count()).toEqual(0);
 		});
 	});
@@ -238,23 +238,23 @@ describe('BaseLogger -', function () {
 		});
 
 		it('emit method has called with log() method', function(){
-			Logger.log('ciao', 'mondo');
-			expect(mockEmit.emit).toHaveBeenCalledWith('log', ['ciao', 'mondo']);
+			Logger.log('hello', 'world');
+			expect(mockEmit.emit).toHaveBeenCalledWith('log', ['hello', 'world']);
 		});
 
 		it('emit method has called with info() method', function(){
-			Logger.info('ciao', 'mondo');
-			expect(mockEmit.emit).toHaveBeenCalledWith('info', ['ciao', 'mondo']);
+			Logger.info('hello', 'world');
+			expect(mockEmit.emit).toHaveBeenCalledWith('info', ['hello', 'world']);
 		});
 
 		it('emit method has called with warn() method', function(){
-			Logger.warn('ciao', 'mondo');
-			expect(mockEmit.emit).toHaveBeenCalledWith('warn', ['ciao', 'mondo']);
+			Logger.warn('hello', 'world');
+			expect(mockEmit.emit).toHaveBeenCalledWith('warn', ['hello', 'world']);
 		});
 
 		it('emit method has called with error() method', function(){
-			Logger.error('ciao', 'mondo');
-			expect(mockEmit.emit).toHaveBeenCalledWith('error', ['ciao', 'mondo']);
+			Logger.error('hello', 'world');
+			expect(mockEmit.emit).toHaveBeenCalledWith('error', ['hello', 'world']);
 		});
 	});
 

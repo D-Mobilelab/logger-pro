@@ -1,17 +1,18 @@
+var Logger = require('../src/base-logger.js');
 var RotatingLogger = require('../src/rotating-logger.js');
 
 describe('Rotating Logger -', function () {
 
-	var RotLogger, MockConsole;	
+	var RotLogger;	
 
 	beforeEach(function(){
 
 		RotLogger = RotatingLogger;
 
-		spyOn(console, 'log');				
-		spyOn(console, 'info');				
-		spyOn(console, 'warn');				
-		spyOn(console, 'error');				
+		spyOn(Logger, 'log');				
+		spyOn(Logger, 'info');				
+		spyOn(Logger, 'warn');				
+		spyOn(Logger, 'error');				
 	});
 
 	describe('rotating logger get Config -', function(){
@@ -37,23 +38,23 @@ describe('Rotating Logger -', function () {
 		});
 
 		it('logger prints log messages', function(){
-			RotLogger.log('ciao', 'mondo');
-			expect(console.log).toHaveBeenCalledWith([['ciao', 'mondo']]);
+			RotLogger.log('hello', 'world');
+			expect(Logger.log).toHaveBeenCalledWith(['hello', 'world']);
 		});
 
 		it('logger prints info messages', function(){
-			RotLogger.info('ciao', 'mondo');
-			expect(console.info).toHaveBeenCalledWith([['ciao', 'mondo']]);
+			RotLogger.info('hello', 'world');
+			expect(Logger.info).toHaveBeenCalledWith(['hello', 'world']);
 		});
 
 		it('logger prints warn messages', function(){
-			RotLogger.warn('ciao', 'mondo');
-			expect(console.warn).toHaveBeenCalledWith([['ciao', 'mondo']]);
+			RotLogger.warn('hello', 'world');
+			expect(Logger.warn).toHaveBeenCalledWith(['hello', 'world']);
 		});
 
 		it('logger prints error messages', function(){
-			RotLogger.error('ciao', 'mondo');
-			expect(console.error).toHaveBeenCalledWith([['ciao', 'mondo']]);
+			RotLogger.error('hello', 'world');
+			expect(Logger.error).toHaveBeenCalledWith(['hello', 'world']);
 		});
 	});
 
@@ -198,13 +199,14 @@ describe('Rotating Logger -', function () {
 		});
 
 		it('fail endRecording', function(){
-			var init = function(){
-				RotLogger.init({
-					enabled: true,
-					level: 'log',
-					recordingEnabled: false
-				});
-			};
+			spyOn(console, 'warn');
+
+			RotLogger.init({
+				enabled: true,
+				level: 'log',
+				recordingEnabled: false
+			});
+
 			RotLogger.log('Hello World!');
 			RotLogger.endRecording();
 			expect(console.warn).toHaveBeenCalledWith('RotatingLogger :: endRecording called while RotatingLogger was not recording');

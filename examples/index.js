@@ -1,9 +1,7 @@
-// var logger = new LoggerPro.BaseLogger;
-// var rotLogger = new LoggerPro.RotatingLogger();
 
 BaseLogger.init({
 	level: 'log', //set all level to true
-    enabled: true //enables logger
+    enabled: true, //enables logger
 });
 
 RotatingLogger.init({
