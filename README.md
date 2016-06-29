@@ -24,7 +24,7 @@ If you want a basic logger system you can use the BaseLogger module. We give you
 
 You can install Logger Pro using NPM or Bower.
 
-### NPM
+### Bower
 ```
 npm install --save logger-pro
 ```
