@@ -17,15 +17,6 @@
  *
  * ***Note that is very relevant of how Logger Pro's levels are ordered!***
  *
- * # Enable/Disable Logger
- * To **enable** or **disable** logger just call init with enabled:true/false.
- *
- * <pre>
- *  Logger.init({enabled:true})  //Logger is now enabled
- *
- *  Logger.init({enabled:false}) //Logger is now disabled
- * </pre>
- *
  * # Components
  * - {@link logger-pro.BaseLogger BaseLogger} 
  * - {@link logger.RotatingLogger RotatingLogger} 

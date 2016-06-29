@@ -13,6 +13,15 @@
 *   <script src="./dist/dist-rotating.js"></script>
 * </pre>
 *
+* # Enable/Disable RotatingLogger
+* To **enable** or **disable** RotatingLogger just call init with enabled:true/false.
+*
+* <pre>
+*  RotatingLogger.init({enabled:true})  //RotatingLogger is now enabled
+*
+*  RotatingLogger.init({enabled:false}) //RotatingLogger is now disabled
+* </pre>
+*
 * To use one of the provided method just use RotatingLogger.*
 *
 * <pre>

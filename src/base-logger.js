@@ -12,13 +12,13 @@
 *   <script src="./dist/dist.js"></script>
 * </pre>
 
-* # Enable/Disable Logger
-* To **enable** or **disable** logger just call init with enabled:true/false.
+* # Enable/Disable BaseLogger
+* To **enable** or **disable** BaseLogger just call init with enabled:true/false.
 *
 * <pre>
-*  BaseLogger.init({enabled:true})  //Logger is now enabled
+*  BaseLogger.init({enabled:true})  //BaseLogger is now enabled
 *
-*  BaseLogger.init({enabled:false}) //Logger is now disabled
+*  BaseLogger.init({enabled:false}) //BaseLogger is now disabled
 * </pre>
 *
 * To use one of the provided method just use BaseLogger.*
