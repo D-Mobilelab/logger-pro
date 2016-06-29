@@ -24,13 +24,13 @@ If you want a basic logger system you can use the BaseLogger module. We give you
 
 You can install Logger Pro using NPM or Bower.
 
-### Bower
+### NPM
 ```
 npm install --save logger-pro
 ```
 You can found the library ready for production on <i>node_modules/logger-pro/dist/dist.js</i>
 
-### NPM
+### BOWER
 ```
 bower install --save logger-pro
 ```
