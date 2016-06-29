@@ -30,7 +30,7 @@ npm install --save logger-pro
 ```
 You can found the library ready for production on <i>node_modules/logger-pro/dist/dist.js</i>
 
-### Bower
+### BOWER
 ```
 bower install --save logger-pro
 ```
