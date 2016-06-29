@@ -1,6 +1,6 @@
 {
   "name": "logger-pro",
-  "description": "Advanced javascript logger system",
+  "description": "Advanced javascript log system",
   "main": [
     "dist/dist.js",
     "dist/dist-rotating.js"
