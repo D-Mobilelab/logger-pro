@@ -32,4 +32,4 @@ You can found the library ready for production on <i>node_modules/logger-pro/dis
 
 ## Documentation
 
-https://d-mobilelab.github.io/logger-pro/0.1.1/#/version/logger-pro
+https://d-mobilelab.github.io/logger-pro/1.0.0/#/version/logger-pro
