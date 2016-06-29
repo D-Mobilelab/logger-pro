@@ -230,6 +230,7 @@ describe('BaseLogger -', function () {
 			spyOn(mockEmit, 'emit');
 
 			Logger.init({
+				level: 'log',
 				enabled: true,
 				emit: function(level, args){
 					mockEmit.emit(level, args);
