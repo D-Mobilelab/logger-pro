@@ -215,9 +215,11 @@ var RotatingLogger = new function(){
 
     // stops recording messages and downloads them as JSON
     this.endRecording = function(){
+
         if (!isRecording){
             console.warn('RotatingLogger :: endRecording called while RotatingLogger was not recording');
         }
+
         isRecording = false;
         endRotate();
     };
@@ -247,7 +249,9 @@ var RotatingLogger = new function(){
             if (typeOfRecEnabled !== 'boolean'){
                 throw new Error('RotatingLogger :: illegal type "' + typeOfRecEnabled + '" for recordingEnabled, "boolean" expected');
             } else {
+
                 recordingEnabled = options.recordingEnabled;
+                isRecording = options.recordingEnabled;
                 delete options.recordingEnabled;
             }
         }
