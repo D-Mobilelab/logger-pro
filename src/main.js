@@ -27,7 +27,7 @@
  * </pre>
  *
  * # Components
- * - {@link logger-pro.BaseLogger BaseLogger} 
+ * - {@link logger-pro.Logger Logger} 
  * - {@link logger.RotatingLogger RotatingLogger} 
  * 
  */

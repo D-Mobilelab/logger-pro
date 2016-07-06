@@ -1,8 +1,8 @@
-(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.BaseLogger = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.Logger = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
-var BaseLogger = new function(){
+var Logger = new function(){
 
-    var _baseLogger = this;
+    var _Logger = this;
 
     // defines log levels and their order (priority)
     var levels = ['log', 'table', 'info', 'warn', 'error'];
@@ -32,7 +32,7 @@ var BaseLogger = new function(){
         if (typeOfenabled === 'boolean'){
             config.enabled = options.enabled;
         } else if (typeOfenabled !== 'undefined') {
-            throw new Error('BaseLogger :: illegal type for enabled - expected boolean, got ' + typeOfenabled);
+            throw new Error('Logger :: illegal type for enabled - expected boolean, got ' + typeOfenabled);
         }
         if (typeOfLevel === 'string'){
             if (levels.indexOf(options.level) === -1){
@@ -43,7 +43,7 @@ var BaseLogger = new function(){
                 }
             }
         } else if (typeOfLevel !== 'undefined') {
-            throw new Error('BaseLogger :: illegal type for level - expected string, got ' + typeOfLevel);
+            throw new Error('Logger :: illegal type for level - expected string, got ' + typeOfLevel);
         }
         if (typeOfLevels === 'object'){
             var level;
@@ -52,13 +52,13 @@ var BaseLogger = new function(){
                 // sanity check for each level's value type (must be a boolean)
                 typeOfLevel = typeof options.levels[level]; 
                 if (typeOfLevel !== 'boolean'){
-                    throw new Error('BaseLogger :: illegal value type for level "' + level + '"' +
+                    throw new Error('Logger :: illegal value type for level "' + level + '"' +
                             ' - expected boolean, got "' + typeOfLevel + '"');
                 }
 
                 // ignore unknown levels
                 if (levels.indexOf(level) === -1){
-                    throw new Error('BaseLogger :: unknown log level "' + level + '"');
+                    throw new Error('Logger :: unknown log level "' + level + '"');
                 }
             }
 
@@ -67,12 +67,12 @@ var BaseLogger = new function(){
                 config[level] = !!options.levels[level];
             }
         } else if (typeOfLevels !== 'undefined'){
-            throw new Error('BaseLogger :: illegal type for levels - expected object, got ' + typeOfLevels);
+            throw new Error('Logger :: illegal type for levels - expected object, got ' + typeOfLevels);
         }
         if (typeOfEmit === 'function'){
             emit = options.emit;
         } else if (typeOfEmit !== 'undefined'){
-            throw new Error('BaseLogger :: illegal type for emit - expected function, got ' + typeOfEmit);
+            throw new Error('Logger :: illegal type for emit - expected function, got ' + typeOfEmit);
         }
     };
     this.log = function log(){
@@ -115,13 +115,13 @@ var BaseLogger = new function(){
     };
 
     // default setup: show every message
-    _baseLogger.init({
+    _Logger.init({
         level: 'log',
         enabled: true
     });
 
 };
 
-module.exports = BaseLogger;
+module.exports = Logger;
 },{}]},{},[1])(1)
 });

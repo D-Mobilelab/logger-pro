@@ -18,7 +18,7 @@ Remember that Logger Pro is organized in levels, sorted by relevance:
  
 Note that is very relevant of how Logger Pro's levels are ordered!
 
-If you want a basic logger system you can use the BaseLogger module. We give you also an advanced logger system, called Rotating Logger. With Rotating Logger you can record and export all the recorded message as a JSON format. Read the full documentation to know more about the two systems provided by Logger Pro.
+If you want a basic logger system you can use the Logger module. We give you also an advanced logger system, called Rotating Logger. With Rotating Logger you can record and export all the recorded message as a JSON format. Read the full documentation to know more about the two systems provided by Logger Pro.
 
 ## Installation
 

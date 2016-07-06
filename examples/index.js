@@ -1,5 +1,5 @@
 
-BaseLogger.init({
+Logger.init({
 	level: 'log', //set all level to true
     enabled: true, //enables logger
 });
@@ -10,32 +10,32 @@ RotatingLogger.init({
 })
 
 var log = function(){
-	BaseLogger.log('pio');
+	Logger.log('pio');
 	RotatingLogger.log('pio');
 }
 
 var info = function(){
-	BaseLogger.info('pio');
+	Logger.info('pio');
 	RotatingLogger.info('pio');
 }
 
 var table = function(){
-	BaseLogger.table('pio');
+	Logger.table('pio');
 	RotatingLogger.table('pio');
 }
 
 var warn = function(){
-	BaseLogger.warn('pio');
+	Logger.warn('pio');
 	RotatingLogger.warn('pio');
 }
 
 var error = function(){
-	BaseLogger.error('pio');
+	Logger.error('pio');
 	RotatingLogger.error('pio');
 }
 
 var enable = function(){
-	BaseLogger.init({
+	Logger.init({
 		enabled: true
 	});
 
@@ -44,7 +44,7 @@ var enable = function(){
 	});
 }
 var disable = function(){
-	BaseLogger.init({
+	Logger.init({
 		enabled: false
 	});
 

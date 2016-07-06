@@ -1,12 +1,8 @@
-var BaseLogger = require('../src/base-logger.js');
+var Logger = require('../src/base-logger.js');
 
-describe('BaseLogger -', function () {
-
-	var Logger;	
+describe('Logger -', function () {
 
 	beforeEach(function(){
-		Logger = BaseLogger;
-
 		spyOn(console, 'log');				
 		spyOn(console, 'info');				
 		spyOn(console, 'warn');				

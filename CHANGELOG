@@ -1,3 +1,6 @@
+** 2.0.0 **
+- BaseLogger renamed to Logger
+
 ** 1.0.0 **
 - Test Doc Singleton
 

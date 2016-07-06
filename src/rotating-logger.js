@@ -21,12 +21,12 @@
 *
 */
 
-var BaseLogger = require('./base-logger.js');
+var Logger = require('./base-logger.js');
 
 var RotatingLogger = new function(){
 
     // IMPORTANT: requires Logger
-    var logger = BaseLogger;
+    var logger = Logger;
 
     // this Array will contain each message
     var messages = [];
@@ -46,8 +46,8 @@ var RotatingLogger = new function(){
      * @methodOf logger-pro.RotatingLogger
      *
      * @description 
-     * This method wraps original BaseLogger's getConfig function
-     * adding maxSize attribute, click {@link logger-pro.BaseLogger#methods_getConfig here} to see getConfig() documentation.
+     * This method wraps original Logger's getConfig function
+     * adding maxSize attribute, click {@link logger-pro.Logger#methods_getConfig here} to see getConfig() documentation.
      */
 
     /* wraps original Logger's getConfig function
@@ -307,7 +307,7 @@ var RotatingLogger = new function(){
      *
      * **Remember that before call init you have to include the RotatingLogger' s javascript file: **
      *
-     * See **BaseLogger** {@link logger-pro.BaseLogger#methods_init init()} documentation to configure also the **BaseLogger** functionality.
+     * See **Logger** {@link logger-pro.Logger#methods_init init()} documentation to configure also the **Logger** functionality.
      *
      * @param {Object} options (see attributes below)
      * @param {Integer} [options.maxSize=100] maxSize defines the max number of messages recorded.
