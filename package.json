@@ -27,6 +27,7 @@
     "type": "git",
     "url": "git://github.com/D-Mobilelab/logger-pro.git"
   },
+  "main": "src/main.js",
   "scripts": {},
   "dependencies": {},
   "devDependencies": {
