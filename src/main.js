@@ -31,3 +31,5 @@
  * - {@link logger.RotatingLogger RotatingLogger} 
  * 
  */
+
+ module.exports = {Logger, RotatingLogger};
