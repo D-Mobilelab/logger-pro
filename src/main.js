@@ -31,5 +31,9 @@
  * - {@link logger.RotatingLogger RotatingLogger} 
  * 
  */
-
- module.exports = {Logger, RotatingLogger};
+var Logger = require('./base-logger');
+var RotatingLogger = require('./rotating-logger');
+module.exports = {
+    Logger: Logger, 
+    RotatingLogger: RotatingLogger
+};
